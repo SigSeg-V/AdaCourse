@@ -22,6 +22,7 @@ package body ada_main is
    E042 : Short_Integer; pragma Import (Ada, E042, "system__dwarf_lines_E");
    E090 : Short_Integer; pragma Import (Ada, E090, "system__soft_links__initialize_E");
    E032 : Short_Integer; pragma Import (Ada, E032, "system__traceback__symbolic_E");
+   E163 : Short_Integer; pragma Import (Ada, E163, "ada__numerics_E");
    E094 : Short_Integer; pragma Import (Ada, E094, "ada__strings__utf_encoding_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__strings__text_buffers_E");
@@ -30,9 +31,12 @@ package body ada_main is
    E119 : Short_Integer; pragma Import (Ada, E119, "system__finalization_root_E");
    E117 : Short_Integer; pragma Import (Ada, E117, "ada__finalization_E");
    E116 : Short_Integer; pragma Import (Ada, E116, "system__file_io_E");
+   E171 : Short_Integer; pragma Import (Ada, E171, "ada__calendar_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "ada__text_io_E");
+   E169 : Short_Integer; pragma Import (Ada, E169, "system__random_seed_E");
    E122 : Short_Integer; pragma Import (Ada, E122, "chone_E");
-   E124 : Short_Integer; pragma Import (Ada, E124, "chtwo_E");
+   E124 : Short_Integer; pragma Import (Ada, E124, "chthree_E");
+   E180 : Short_Integer; pragma Import (Ada, E180, "chtwo_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -188,6 +192,8 @@ package body ada_main is
       System.Traceback.Symbolic'Elab_Body;
       E032 := E032 + 1;
       E016 := E016 + 1;
+      Ada.Numerics'Elab_Spec;
+      E163 := E163 + 1;
       Ada.Strings.Utf_Encoding'Elab_Spec;
       E094 := E094 + 1;
       Ada.Tags'Elab_Spec;
@@ -207,11 +213,17 @@ package body ada_main is
       E117 := E117 + 1;
       System.File_Io'Elab_Body;
       E116 := E116 + 1;
+      Ada.Calendar'Elab_Spec;
+      Ada.Calendar'Elab_Body;
+      E171 := E171 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E106 := E106 + 1;
+      System.Random_Seed'Elab_Body;
+      E169 := E169 + 1;
       E122 := E122 + 1;
       E124 := E124 + 1;
+      E180 := E180 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -250,6 +262,7 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   C:\Users\Charlie.Hutcheson\Documents\AdaCourse\obj\ChOne.o
+   --   C:\Users\Charlie.Hutcheson\Documents\AdaCourse\obj\chthree.o
    --   C:\Users\Charlie.Hutcheson\Documents\AdaCourse\obj\chtwo.o
    --   C:\Users\Charlie.Hutcheson\Documents\AdaCourse\obj\main.o
    --   -LC:\Users\Charlie.Hutcheson\Documents\AdaCourse\obj\

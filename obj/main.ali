@@ -9,11 +9,12 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		4fce0034 NE OO SU
+U main%b		main.adb		eb09abae NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W chone%s		chone.adb		chone.ali
+W chthree%s		chthree.adb		chthree.ali
 W chtwo%s		chtwo.adb		chtwo.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
@@ -27,10 +28,11 @@ D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D chone.ads		20241014013422 500d18ef chone%s
+D chthree.ads		20241014042752 58879299 chthree%s
 D chtwo.ads		20241014013422 1fe00f1e chtwo%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20241014013422 aed7c2a8 main%b
+D main.adb		20241014042752 5297fbab main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -48,17 +50,19 @@ D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 5 11 none]
-G r c none [main standard 5 11 none] [qnsix chtwo 7 14 none]
+G c Z b b [main standard 6 11 none]
+G r c none [main standard 6 11 none] [qnthree chthree 6 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6
+16K9*Ada 20e8 16|1r6
 X 9 a-textio.ads
-58K13*Text_IO 725e16 15|1w10
+58K13*Text_IO 725e16 16|1w10
 X 11 chone.ads
-2K9*ChOne 6e10 15|2w6
-X 12 chtwo.ads
-1K9*ChTwo 9e10 15|3w6 14r4
-7U14*QnSix 15|14s10
-X 15 main.adb
-5U11*Main 5b11 16l5 16t9
+2K9*ChOne 6e10 16|2w6
+X 12 chthree.ads
+1K9*ChThree 8e12 16|4w6 18r4
+6U14*QnThree 16|18s12
+X 13 chtwo.ads
+1K9*ChTwo 9e10 16|3w6
+X 16 main.adb
+6U11*Main 6b11 20l5 20t9
 
