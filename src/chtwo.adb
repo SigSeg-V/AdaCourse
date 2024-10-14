@@ -14,9 +14,9 @@ package body ChTwo is
       
       Ada.Text_IO.Put("Ch 2 Qn 2   > ");
       if FirstNumber > SecondNumber then
-         Ada.Integer_Text_IO.Put(FirstNumber);
+         Ada.Integer_Text_IO.Put(FirstNumber, 1);
       else
-         Ada.Integer_Text_IO.Put(SecondNumber);
+         Ada.Integer_Text_IO.Put(SecondNumber, 1);
       end if;
       
       Ada.Text_IO.New_Line; 
@@ -29,7 +29,7 @@ package body ChTwo is
    begin
       
       while CurrentNumber /= 0 loop
-         Ada.Integer_Text_IO.Get(CurrentNumber);
+         Ada.Integer_Text_IO.Get(CurrentNumber, 1);
          if CurrentNumber = 5 then
             NumberOfFives := NumberOfFives + 1;
          end if;
@@ -37,7 +37,7 @@ package body ChTwo is
       end loop;
       
       Ada.Text_IO.Put("Ch 2 Qn 3   > ");
-      Ada.Integer_Text_IO.Put(NumberOfFives);
+      Ada.Integer_Text_IO.Put(NumberOfFives, 1);
       
    end QnThree;
 
@@ -45,7 +45,7 @@ package body ChTwo is
       MyCoolVar: Integer range 0..999 := 100;
    begin
       Ada.Text_IO.Put("Ch 2 Qn 4   > ");
-      Ada.Integer_Text_IO.Put(MyCoolVar);
+      Ada.Integer_Text_IO.Put(MyCoolVar, 1);
       
    end QnFour;
    
@@ -63,7 +63,7 @@ package body ChTwo is
       
       while K <= 10 loop
          Ada.Text_IO.Put("Ch 2 Qn 6.1   > ");
-         Ada.Integer_Text_IO.Put(K);
+         Ada.Integer_Text_IO.Put(K, 1);
          Ada.Text_IO.New_Line;
          K := K + 1;
       end loop;
@@ -72,7 +72,7 @@ package body ChTwo is
       
       loop
          Ada.Text_IO.Put("Ch 2 Qn 6.2   > ");
-         Ada.Integer_Text_IO.Put(K);
+         Ada.Integer_Text_IO.Put(K, 1);
          Ada.Text_IO.New_Line;
          K := K + 1;
          exit when K > 10;
